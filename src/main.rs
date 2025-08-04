@@ -39,7 +39,6 @@ fn calculate_difference_2(list: &str) {
     for num in right_side {
         *right_counts.entry(num).or_insert(0) += 1;
     }
-
     let total: i32 = left_side.iter()
         .map(|num| {
             right_counts.get(num).unwrap_or(&0) * num}).sum();
